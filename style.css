@@ -1,0 +1,500 @@
+/* Persiapan */
+:root {
+  --main-color: #09376c;
+  --main-font: Buenard;
+  --second-font: Inter;
+}
+
+
+
+@font-face {
+  font-family: "Inter";
+  src: url("../font/Inter/Inter-V.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Buenard";
+  src: url("../font/Buenard/Buenard-Bold.ttf") format("truetype");
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  /* transition: all 5s 1s; */
+  /* scroll-behavior: smooth; */
+}
+/* Akhir persiapan */
+
+section {
+  margin-top: 200px;
+}
+
+/* Navbar */
+.container {
+  max-width: 1440px;
+
+  /* border: 3px solid black; */
+}
+
+.container.sticky {
+  position: fixed;
+  background-color: rgb(70, 142, 166);
+  width: 100%;
+  top: 0;
+  transition: 0.5s ease-in-out;
+  box-shadow: 0 1px 10px white;
+}
+.navbar .nav-wrapper {
+  height: 92px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* margin: auto 10px; */
+  padding: 0.75rem 1.25rem;
+}
+
+/* logo */
+.logo-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  /* margin-left: 2.8rem; */
+}
+.logo-container .logo {
+  width: 5rem;
+  height: 5rem;
+}
+.logo-container .nama {
+  font-size: 1.5rem;
+  color: var(--main-color);
+}
+
+/* menu */
+.nav-wrapper .nav-menu .menu-wrapper {
+  display: flex;
+  justify-content: space-between;
+  gap: 3.125rem;
+}
+
+.menu-wrapper .menu-item {
+  transition: 0.5s;
+}
+.menu-wrapper .menu-item .menu-link {
+  color: var(--main-color);
+  font-family: Inter;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.menu-wrapper .menu-item:hover {
+  transform: scale(1.5) translatey(-3px);
+  transition: 0.5s;
+  box-shadow: 0px 10px 5px -8px gray;
+}
+
+/* tombol */
+.nav-wrapper .nav-tombol {
+  display: flex;
+  justify-content: end;
+}
+
+.nav-tombol .tombol-login {
+  background-color: var(--main-color);
+  border: 3px solid var(--main-color);
+  color: #e8b2b255, (255, 255);
+  transition: 0.5s ease-in-out;
+  font-family: Inter;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  display: flex;
+  width: 10rem;
+  height: 3rem;
+  border-radius: 25px;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  box-shadow: 2px 3px 5px gray;
+}
+
+.tombol-login .login-icon {
+  display: none;
+}
+
+.nav-tombol .tombol-login:hover {
+  transform: scale(1.2);
+  background-color: #1c86ad;
+  border-color: #1c86ad;
+}
+
+/* icon menu */
+.nav-wrapper .nav-menu-icon {
+  font-size: 3rem;
+  display: none;
+  color: var(--main-color);
+  margin-right: 1rem;
+  position: absolute;
+  top: 1.1rem;
+  right: 1rem;
+}
+
+.nav-menu-icon i {
+  color: var(--main-color);
+}
+
+/* Section */
+
+.isi {
+  /* border: 3px solid black; */
+  /* background-color: #1cad5d; */
+  max-height: 1000px;
+  margin: 0;
+  transition: all 1s ease-in-out;
+}
+
+.isi .isi-wrapper {
+  height: 600px;
+  /* height: 2000px; */
+  display: flex;
+  flex-direction: row;
+}
+
+.isi-wrapper .isi-kiri {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 60%;
+}
+
+.isi-kiri .judul-wrapper {
+  /* padding: 2rem 5rem; */
+  width: 100%;
+  /* background-color: #1cad5d; */
+}
+
+.isi-kiri .judul-wrapper .judul {
+  /* border: 1px solid black; */
+  width: 31rem;
+  /* margin-top: -2rem; */
+  margin-left: 7rem;
+  color: var(--main-color);
+  font-family: Buenard;
+  font-size: 2.5rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  justify-self: end;
+}
+
+.isi-kiri .penjelasan-wrapper {
+  margin-top: 1rem;
+  width: 100%;
+  /* background-color: aquamarine; */
+}
+
+.isi-kiri .penjelasan-wrapper .penjelasan {
+  /* border: 1px solid black; */
+  width: 32rem;
+  color: #000;
+  font-family: Inter;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-left: 7.5rem;
+}
+
+.isi-kiri .tombol-wrapper {
+  /* background-color: aqua; */
+  width: 100%;
+  height: 30%;
+}
+
+.isi-kiri .tombol-wrapper a.tombol {
+  /* border: 1px solid black; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 14rem;
+  height: 3rem;
+  background-color: var(--main-color);
+  border-radius: 25px;
+  margin-left: 9rem;
+  margin-top: 3rem;
+  color: #fff;
+  font-family: Buenard;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 70px;
+  box-shadow: 3px 5px 5px gray;
+  transition: 0.5s ease-in-out;
+}
+
+.isi-kiri .tombol-wrapper a.tombol:hover {
+  background-color: #1cadad;
+  transform: scale(1.1);
+  box-shadow: 15px 15px 5px -5px gray;
+  transition: 0.5s ease-in-out;
+}
+/* isi kanan */
+.isi-wrapper .isi-kanan {
+  width: 40%;
+  /* background: #1cad5d; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.isi-kanan .foto-dokter {
+  overflow: hidden;
+  flex-shrink: 0;
+  border-radius: 20px;
+  margin-top: -3rem;
+  box-shadow: 5px 5px 5px gray;
+  transition: 0.5s;
+}
+.foto-dokter > img {
+  width: 351px;
+  height: 225px;
+}
+.foto-dokter .tombol-wrapper {
+  display: none;
+}
+.isi-kanan .foto-dokter:hover {
+  transform: scale(1.1);
+  transition: 0.5s;
+  box-shadow: 20px 20px 5px -5px gray;
+}
+
+/* footer */
+.footer {
+  max-width: 1444px;
+  height: 200px;
+}
+/* responsive */
+@media screen and (max-width: 991px) {
+  /* logo */
+  .logo-container {
+    margin-left: 2rem;
+  }
+  .logo-container .nama {
+    display: none;
+  }
+  /* menu nav */
+  .nav-wrapper .nav-menu .menu-wrapper {
+    gap: 2.5rem;
+  }
+
+  .menu-wrapper .menu-item .menu-link {
+    font-size: 0.9rem;
+  }
+  /* tombol login */
+  .nav-wrapper .nav-tombol {
+    gap: 1.5rem;
+  }
+
+  .tombol {
+    width: 6rem;
+    font-size: 0.9rem;
+  }
+
+  .menu-wrapper .menu-item:hover {
+    transform: scale(1.2) translatey(-3px);
+  }
+
+  /* section */
+
+  .isi {
+    max-width: 991px;
+  }
+
+  .isi .isi-wrapper {
+    width: auto;
+    /* background-color: #8cceaa; */
+  }
+
+  .isi-wrapper .isi-kiri,
+  .isi-wrapper .isi-kanan {
+    background-color: rgba(240, 248, 255, 0.451);
+  }
+
+  .isi-kiri .judul-wrapper .judul {
+    width: 80%;
+    font-size: 2rem;
+    margin-left: 10%;
+  }
+  .isi-kiri .penjelasan-wrapper .penjelasan {
+    font-size: 1rem;
+    width: 80%;
+    margin-left: 10%;
+  }
+
+  .isi-kiri .tombol-wrapper a.tombol {
+    width: 10rem;
+    font-size: 15px;
+    margin-left: 6rem;
+  }
+
+  /* isi kanan */
+  .isi-wrapper .isi-kanan .foto-dokter {
+    width: 80%;
+    margin-top: -8rem;
+  }
+
+  /* akhir isi */
+}
+
+@media screen and (max-width: 760px) {
+  /* menu-navbar */
+  .nav-wrapper .nav-menu .menu-wrapper {
+    display: block;
+    position: absolute;
+    color: var(--main-color);
+    background-color: white;
+    top: 15%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    line-height: 2.5rem;
+    /* background-color: var(--main-color); */
+    padding: 1rem 3rem;
+    border: 2px double var(--main-color);
+    border-radius: 0 0 10px 10px;
+    clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
+    transition: 0.5s ease-in-out;
+  }
+
+  .nav-wrapper .nav-menu .menu-wrapper.active {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    transition: 0.5s ease-in-out;
+  }
+
+  .menu-wrapper .menu-item {
+    /* width: 100%; */
+    text-align: center;
+  }
+  .menu-wrapper .menu-item .menu-link {
+    text-align: center;
+    font-size: 2rem;
+    color: var(--main-color);
+  }
+
+  /* logo */
+  .logo-container {
+    margin-left: auto;
+  }
+
+  .logo-container .nama {
+    display: initial;
+  }
+
+  .menu-wrapper .menu-item:hover {
+    transform: scale(1.1);
+    box-shadow: none;
+  }
+  /* tombol login */
+  .nav-tombol .tombol-login {
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    box-shadow: none;
+    width: 3rem;
+    position: absolute;
+    right: 6.5rem;
+    top: 1.2rem;
+  }
+
+  .nav-tombol .tombol-login:hover {
+    color: #1c86ad;
+    transform: none;
+    background-color: rgba(0, 0, 0, 0);
+  }
+
+  .tombol-login .login-icon {
+    display: initial;
+    color: var(--main-color);
+    font-size: 3rem;
+  }
+
+  .tombol-login span {
+    display: none;
+  }
+  /* icon menu */
+  .nav-wrapper .nav-menu-icon {
+    display: initial;
+    transition: 0.5s ease-in-out;
+  }
+
+  .navbar .nav-wrapper .menu-toggle.bx-x {
+    transform: rotate(360deg);
+    transition: 0.5s ease-in-out;
+  }
+
+  /* isi */
+  .isi .isi-wrapper {
+    flex-direction: column;
+  }
+
+  /* isi kiri */
+  .isi-wrapper .isi-kiri {
+    /* order: 2; */
+    width: 100%;
+    height: auto;
+    border: 1px solid black;
+  }
+  .isi-kiri .judul {
+    margin-top: 10%;
+  }
+  .isi-kiri .tombol-wrapper {
+    margin-top: 10%;
+    /* margin-bottom: 10%; */
+    padding: 20px 10px;
+  }
+
+  .isi-kiri .tombol-wrapper a.tombol {
+    justify-self: center;
+    margin: auto;
+  }
+
+  .isi-wrapper .isi-kanan {
+    /* order: 1; */
+    border: 1px solid black;
+    width: 100%;
+    height: 400px;
+    align-items: center;
+    /* overflow: hidden; */
+  }
+  .isi-wrapper .isi-kanan .foto-dokter {
+    /* display: none; */
+    margin-top: auto;
+    /* margin: auto auto auto 40%; */
+    box-shadow: none;
+    padding: 0;
+    width: 100%;
+    border-radius: 0;
+    /* -webkit-filter: brightness(60%);
+    filter: brightness(60%); */
+  }
+  .isi-wrapper .isi-kanan .foto-dokter:hover {
+    transform: none;
+  }
+
+  .isi-kanan .foto-dokter img {
+    width: 100%;
+    height: 300px;
+    filter: brightness(60%);
+  }
+
+  /* isi 2 */
+  .isi-dua {
+    width: 100%;
+    height: 100%;
+    background-color: #1c86ad;
+  }
+}
